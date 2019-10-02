@@ -23,7 +23,7 @@
             var s = document.createElement("span");
             s.innerHTML = toFix(((v.length % 10 == 0) ? v.length + "" : "----") + "\t" + v[v.length - 1]) + ((v.length % 10) ? "\n" : "");
             x.appendChild(s);
-            setTimeout(loop, 800);
+            setTimeout(loop, 100);
         }
         v.push(0);
         v.push(1);
