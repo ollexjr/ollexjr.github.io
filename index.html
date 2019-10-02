@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
+<script>
+    window.onload = function() {
+        var x = document.getElementById("container");
+        function loop () {
+            var w = document.createElement("div");
+            x.appendChild(document.createTextNode(":thinking_face:"));
+            x.appendChild(w);
+            setTimeout(loop, 1000);
+        }
+        loop();
+    }
+<script>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div id="container">
+
+    </div>
 </body>
 </html>
