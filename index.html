@@ -21,7 +21,7 @@
         function loop() {
             v.push(v[v.length - 1] + v[v.length - 2]);
             var s = document.createElement("span");
-            s.innerHTML = ((v.length % 10 == 0) ? v.length : "-----") + "\t " + toFix(v[v.length - 1] + "\n");
+            s.innerHTML = ((v.length % 10 == 0) ? v.length : "-----") + "\t " + toFix(v[v.length - 1]) + "\n";
             x.appendChild(s);
             setTimeout(loop, 100);
         }
