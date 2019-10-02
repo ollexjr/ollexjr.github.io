@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<style>
+span { padding-left: 10px; }
+</style>
 <script>
     window.onload = function() {
         var x = document.getElementById("container");
@@ -7,7 +10,9 @@
         function loop () {
             var w = document.createElement("span");
             v.push(v[v.length-1] + v[v.length-2]);
-            x.appendChild(document.createTextNode(v[v.length-1]));
+            var t = v[v.length-1];
+            
+            w.innerHTML = t;
             x.appendChild(w);
             setTimeout(loop, 1000);
         }
@@ -17,8 +22,8 @@
     }
 </script>
 <body>
-    <div id="container">
+    <pre id="container">
 
-    </div>
+    </pre>
 </body>
 </html>
