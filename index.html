@@ -8,12 +8,8 @@ span { padding-left: 10px; }
         var x = document.getElementById("container");
         var v = new Array();
         function loop () {
-            var w = document.createElement("span");
             v.push(v[v.length-1] + v[v.length-2]);
-            var t = v[v.length-1];
-            
-            w.innerHTML = t;
-            x.appendChild(w);
+            x.appendChild((document.createElement("span")).innerHTML = v[v.length-1] + (v.length % 10 ? "\n": ""));
             setTimeout(loop, 1000);
         }
         v.push(0);
