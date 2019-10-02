@@ -3,9 +3,11 @@
 <script>
     window.onload = function() {
         var x = document.getElementById("container");
+        var v = new Array();
         function loop () {
-            var w = document.createElement("div");
-            x.appendChild(document.createTextNode(":thinking_face:"));
+            var w = document.createElement("span");
+            v.push(v[v.length-1] + v[v.length-2]);
+            x.appendChild(document.createTextNode(v[v.length-1]));
             x.appendChild(w);
             setTimeout(loop, 1000);
         }
