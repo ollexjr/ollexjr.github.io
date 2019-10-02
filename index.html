@@ -10,7 +10,7 @@ span { padding-left: 10px; }
         function loop () {
             v.push(v[v.length-1] + v[v.length-2]);
             var s = document.createElement("span");
-            s.innerHTML = v[v.length-1] + (v.length % 10 ? "\n": "");
+            s.innerHTML = v[v.length-1] + ((v.length % 10 == 0) ? "\n": "");
             x.appendChild(s);
             setTimeout(loop, 1000);
         }
